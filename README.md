@@ -2,12 +2,12 @@
 
 ## Compile
 ```
-$ javac isghe/properties/DumpProperties.java
+₿ . script/compile.sh
 ```
 
 ## Run
 ```
-$ java isghe.properties.DumpProperties
+₿ . script/run.sh
 ```
 
 the output is in JSON format
