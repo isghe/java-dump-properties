@@ -2,6 +2,7 @@ package isghe.properties;
 import java.util.List;
 import java.util.Properties;
 import java.util.ArrayList;
+import org.apache.logging.log4j.Logger;
 
 class DumpProperties{
 	private static String wrap (Object object){
@@ -16,6 +17,9 @@ class DumpProperties{
 				fields.add (DumpProperties.wrap (key) + ": " + DumpProperties.wrap (System.getProperty (key.toString ())));
 			}
 		}
+
+		fields.add (DumpProperties.wrap ("log4j2") + ": " + DumpProperties.wrap (org.apache.logging.log4j.Logger.class.getPackage().getSpecificationVersion()));
+
 		System.out.println ("{"+String.join (",", fields)+"}");
 	}
 }
